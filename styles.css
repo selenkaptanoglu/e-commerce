@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.questions {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+}
+
+.answer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 3em;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.answer-button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.answer-button.selected {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+.color-button {
+    display: inline-block;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgb(195, 195, 195);
+    transition: all 0.3s ease-in-out;
+}
+
+.color-button:hover {
+    transform: scale(1.2);
+}
+
+.color-button.selected {
+    border: 2px solid black;
+}
+
+.nav-container {
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    bottom: 200px;
+    display: flex;
+    gap: 150px;
+}
+
+.arrow-button {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.arrow-button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-button.selected {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+.loading {
+    display: flex;
+    border-radius: 3em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 100px;
+}
+
+/* products */
+.product-list-container {
+    max-width: 300px;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.product-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* slideriçin */
+.container {
+    flex: 0 0 auto;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+}
+
+.productCard {
+    max-width: 300px;
+    height: 450px;
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pictureCard {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pictureCard img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.name {
+    text-align: center;
+    font-size: 14px;
+}
+
+.price-old {
+    text-align: center;
+    font-size: 14px;
+    text-align: cover;
+}
+
+.price-new {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+}
+
+.pre-btn,
+.nxt-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+}
+
+.pre-btn {
+    left: 150px;
+}
+
+.nxt-btn {
+    right: 150px;
+}
+
+.viewProduct {
+    position: absolute;
+    left: 50%;
+    padding: 10px;
+    width: 60%;
+    transform: translateX(-50%);
+    text-wrap: wrap;
+    border-radius: 3em;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    bottom: 10px;
+}
+
+#step-counter {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.step-line {
+    width: 20px;
+    height: 2px;
+    margin: 0 1px;
+    background-color: #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.step-line.active {
+    background-color: #4c4c4c;
+}
